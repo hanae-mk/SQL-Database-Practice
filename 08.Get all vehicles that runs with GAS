@@ -1,0 +1,6 @@
+
+select *, FuelTypes.FuelTypeName
+from VehicleDetails
+INNER JOIN FuelTypes
+ON VehicleDetails.FuelTypeID = FuelTypes.FuelTypeID
+where FuelTypes.FuelTypeName = N'GAS'; --N is for unicode
