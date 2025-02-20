@@ -1,0 +1,9 @@
+
+select distinct Makes.Make, FuelTypes.FuelTypeName
+from VehicleDetails
+INNER JOIN Makes
+ON Makes.MakeID = VehicleDetails.MakeID
+INNER JOIN FuelTypes
+ON FuelTypes.FuelTypeID = VehicleDetails.FuelTypeID
+where FuelTypes.FuelTypeName = N'GAS'
+Order By Makes.Make ASC;
