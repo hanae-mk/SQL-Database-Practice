@@ -1,0 +1,4 @@
+
+--In this query we will use aggregate functions
+select Min(Engine_CC) as MinEngine , Max(Engine_CC) as MaxEngine, Avg(Engine_CC) as AvgEngine
+from VehicleDetails;
