@@ -1,2 +1,4 @@
+--The NewID() function will generate GUID for each row
+
 select * from FuelTypes
-order by NewID()
+Order By NEWID();
