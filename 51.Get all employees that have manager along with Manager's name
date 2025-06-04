@@ -1,0 +1,14 @@
+-- Name         ManagerID        Salary      ManagerName
+--1      Ali             1             4000        Mohammed
+--2     Ahmed            1              500        Mohammed
+--3     Fadi             2              500          Ali
+--4     Maher            4              350          Fadi
+
+-- this will select all data from employees that are managed by someone along with their manager name, 
+-- employees that have no manager will not be selected because we used inner join 
+-- Note we use inner join on the same table with diffrent alliace.
+
+SELECT        Employees.Name, Employees.ManagerID, Employees.Salary, Managers.Name AS ManagerName
+FROM            Employees INNER JOIN
+                         Employees AS Managers ON Employees.ManagerID = Managers.EmployeeID
+
