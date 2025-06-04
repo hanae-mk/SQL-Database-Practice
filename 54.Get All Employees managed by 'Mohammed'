@@ -1,0 +1,8 @@
+--  Name         ManagerID        Salary      ManagerName
+--1    Ali             1              4000        Mohammed
+--2    Ahmed             1             500        Mohammed
+
+SELECT        Employees.Name, Employees.ManagerID, Employees.Salary, Managers.Name AS ManagerName
+FROM            Employees INNER JOIN
+                         Employees AS Managers ON Employees.ManagerID = Managers.EmployeeID
+where Managers.Name='Mohammed'
